@@ -50,13 +50,13 @@ jobs:
 
     - name: Clone source code
       run: |
-        git clone https://github.com/coolsnowwolf/lede lede
-
+        git clone https://github.com/x-wrt/x-wrt.git
+        
     - name: Update feeds
-      run: cd lede && ./scripts/feeds update -a
+      run: cd x-wrt && ./scripts/feeds update -a
 
     - name: Install feeds
-      run: cd lede && ./scripts/feeds install -a
+      run: cd x-wrt && ./scripts/feeds install -a
 
     - name: Load custom configuration
       run: |
